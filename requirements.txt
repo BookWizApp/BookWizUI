@@ -1,0 +1,4 @@
+pyrebase
+streamlit_extras
+streamlit
+streamlit_option_menu
