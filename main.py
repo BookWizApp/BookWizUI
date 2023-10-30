@@ -5,8 +5,11 @@ from streamlit_option_menu import option_menu
 
 import home, account, profiles, about
 st.set_page_config(
-        page_title="BookWiz",
+    page_title="BookWiz",
 )
+if 'username' not in st.session_state:
+    st.session_state.username = ''  # Set the initial value to an empty string or your desired default value
+
 
 
 
@@ -22,7 +25,7 @@ class MultiApp:
             "function": func
         })
 
-    def run():
+    def run(self):
         if st.session_state.get('switch_button', False):
             st.session_state['menu_option'] = (st.session_state.get('menu_option',1)) 
             manual_select = st.session_state['menu_option']
@@ -57,5 +60,6 @@ class MultiApp:
              
           
              
-    run()            
+multi_app = MultiApp()
+multi_app.run()          
          

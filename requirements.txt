@@ -1,4 +1,3 @@
-pyrebase
-streamlit_extras
+firebase_admin
 streamlit
 streamlit_option_menu

@@ -66,7 +66,7 @@ def app():
         
         if choice == 'Sign up':
             username = st.text_input("Enter  your unique username")
-            
+            print(username)
             if st.button('Create my account'):
                 user = auth.create_user_with_email_and_password(email, password)
                 
