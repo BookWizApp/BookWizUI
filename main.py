@@ -3,7 +3,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 
 
-import home, account, profiles, about
+import home, account, about
 st.set_page_config(
     page_title="BookWiz",
 )
@@ -35,7 +35,7 @@ class MultiApp:
         with st.sidebar:        
             app = option_menu(
                 menu_title='BookWiz ',
-                options=['Home','Account','Profile','about'],
+                options=['Home','Account','about'],
                 icons=['house-fill','person-circle','trophy-fill','chat-fill','info-circle-fill'],
                 menu_icon='chat-text-fill',
                 default_index=1, manual_select=manual_select, key='menu_1',
@@ -51,9 +51,7 @@ class MultiApp:
         if app == "Home":
             home.app()
         if app == "Account":
-            account.app()         
-        if app == 'Profile':
-            profiles.app()
+            account.app() 
         if app == 'about':
             about.app() 
              
